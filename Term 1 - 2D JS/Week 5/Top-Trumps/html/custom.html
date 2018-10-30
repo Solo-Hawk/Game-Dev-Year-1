@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>    
+        <style>
+            .left {
+                float: left;
+                width: 30%;
+                padding-left: 30px;
+            }
+            
+            .right {
+                float: left;
+                width: 30%;
+                padding-left: 30px;
+            }
+            
+            .down {
+                clear: both;
+                padding-top: 10px;
+                padding-left: 30px;
+            }
+        </style>
+        
+        <meta charset="UTF-8">
+		<title>Objects Game</title>        		
+	</head>
+	
+	<body>
+        <h2>Welcome to Top Trumps</h2>		
+        
+        <h3>Make Your Own Edition</h3>
+        
+        <h4 id="playerMovePrompt">Player 1's move</h4>
+        
+        <div class="left" id="player1box">
+            <fieldset id="player1field">
+                <legend id="player1name">Player 1:</legend>
+                <div id="player1card">                    
+                    <p id="name1">Name: </p>
+                    <p id="franchise1">Franchise: </p>
+                    <img id="image1" src="" height="200">
+                    <p id="strength1">Strength:</p>
+                    <p id="intelligence1">Intelligence: </p>
+                    <p id="charisma1">Charisma: </p>
+                    <p id="year1">Year: </p>
+                </div>
+                
+                <div id="statSelect">
+                    <input type="radio" name="stat" value="strength" checked="checked"> Strength <br>
+                    <input type="radio" name="stat" value="intelligence"> Intelligence <br>
+                    <input type="radio" name="stat" value="charisma"> Charisma <br>
+                    <input type="radio" name="stat" value="year"> Year <br> <br>
+                    <input type="button" value="Select Stat" id="button1" onclick="gameLoop()">
+                </div>
+                
+            </fieldset>
+        </div>
+        
+        <div class="right" id="player2box">
+            <fieldset id="player2field">
+                <legend id="player2name">Player 2:</legend>
+                <div id="player2card">                    
+                    <p id="name2">Name: </p>
+                    <p id="franchise2">Franchise: </p>
+                    <img id="image2" src="" height="200">
+                    <p id="strength2">Strength:</p>
+                    <p id="intelligence2">Intelligence: </p>
+                    <p id="charisma2">Charisma: </p>
+                    <p id="year2">Year: </p>
+                </div>
+            </fieldset>
+        </div>                
+        
+        <div class="down" id="resultBox">
+            <p id="resultText">This is where I'd put my result... IF I HAD ONE!! </p>
+            <input type="button" value="Next Round" id="resultButton" onclick="restartGame()">
+        </div>
+	</body>
+    
+    <script src="../js/custom-list.js"></script>
+    <script src="../js/html-functions.js"></script>
+    <script src="../js/game.js"></script>
+</html>
